@@ -23,8 +23,12 @@
     <section class="hero container" aria-labelledby="paper-title">
       <p class="conference">Accepted at WACV 2027 · Datasets Track</p>
       <h1 id="paper-title"><span>FoodClaim:</span> A Benchmark for Detecting Generated and Manipulated Food Defects</h1>
-      <p class="authors"><span>Ahmad Javed</span><span>Syed Talal Wasim</span><span>Hamid Suleman</span><a href="https://pages.iai.uni-bonn.de/gall_juergen/">Juergen Gall ↗</a></p>
-      <p class="affiliation"><a href="https://www.uni-bonn.de/en">University of Bonn</a></p>
+      <ul class="authors" aria-label="Authors and affiliations">
+        <li><a href="https://ahmadjaved97.github.io/">Ahmad Javed</a><p class="affiliation">University of Bonn</p></li>
+        <li><a href="https://talalwasim.github.io/">Syed Talal Wasim</a><p class="affiliation">University of Bonn<br>Lamarr Institute for Machine Learning and Artificial Intelligence</p></li>
+        <li><span>Hamid Suleman</span><p class="affiliation">University of Bonn<br>Lamarr Institute for Machine Learning and Artificial Intelligence</p></li>
+        <li><a href="https://pages.iai.uni-bonn.de/gall_juergen/">Juergen Gall</a><p class="affiliation">University of Bonn<br>Lamarr Institute for Machine Learning and Artificial Intelligence</p></li>
+      </ul>
       <div class="resources" aria-label="Research resources">
         <div class="resource"><span>Paper</span><span class="coming-soon">Coming soon</span></div>
         <a class="resource" href="https://huggingface.co/datasets/ahmadjaved97/FoodClaim"><img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" width="24" height="24" alt="" aria-hidden="true"><span>Hugging Face Dataset</span></a>
@@ -43,10 +47,11 @@
           <a class="figure-link" href="assets/pipeline.webp" aria-label="View larger: FoodClaim construction pipeline"><img src="assets/pipeline.webp" width="4200" height="1403" alt="Five-stage pipeline: source datasets, data cleaning, structured description generation, image generation and editing, and the final five-class dataset." loading="lazy" decoding="async"></a>
           <figcaption><strong>FoodClaim construction pipeline.</strong> Authentic photographs from five food-recognition datasets and a separately collected authentic-defective set are consolidated into 13 categories, deduplicated with DINOv2, filtered for visible people, and manually reviewed. Qwen3.5-27B produces structured descriptions. Text-to-image models generate clean and defective variants; image-editing models apply the same defect instruction to the source photograph. Together with the authentic classes, these form the five-class dataset.</figcaption>
         </figure>
-      <details class="disclosure"><summary>Matched-image construction</summary><div class="disclosure-body"><figure class="example-figure ">
+      <h3>Matched-image construction</h3>
+      <figure class="example-figure">
           <a class="figure-link" href="assets/construction.webp" aria-label="View larger: Matched construction"><img src="assets/construction.webp" width="3000" height="1156" alt="An authentic ramen photograph is linked to generated, generated-defective, and manipulated-defective variants through a shared text description and defect instruction." loading="lazy" decoding="async"></a>
           <figcaption><strong>Construction of FoodClaim.</strong> Each authentic photograph is paired with generated, generated-defective, and manipulated-defective images sharing its description, defect instruction, and generator family. Authentic-defective photographs are collected separately.</figcaption>
-        </figure></div></details>
+        </figure>
     </section>
 
     <section class="section container dataset-statistics" id="statistics" aria-labelledby="statistics-title">
